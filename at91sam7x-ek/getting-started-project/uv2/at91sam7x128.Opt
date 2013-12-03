@@ -1,0 +1,124 @@
+### uVision2 Project, (C) Keil Software
+### Do not modify !
+
+ cExt (*.c)
+ aExt (*.s*; *.src; *.a*)
+ oExt (*.obj)
+ lExt (*.lib)
+ tExt (*.txt; *.h; *.inc)
+ pExt (*.plm)
+ CppX (*.cpp)
+ DaveTm { 0,0,0,0,0,0,0,0 }
+
+Target (flash-SAM-ICE), 0x0004 // Tools: 'ARM-ADS'
+Target (sram-SAM-ICE), 0x0004 // Tools: 'ARM-ADS'
+Target (flash-ULINK), 0x0004 // Tools: 'ARM-ADS'
+Target (sram-ULINK), 0x0004 // Tools: 'ARM-ADS'
+GRPOPT 1,(at91lib),0,0,0
+GRPOPT 2,(getting-started-project),0,0,0
+
+OPTFFF 1,1,1,0,0,0,0,0,<../../../at91lib/peripherals/aic/aic.c><aic.c> 
+OPTFFF 1,2,1,0,0,0,0,0,<../../../at91lib/peripherals/cp15/cp15.c><cp15.c> 
+OPTFFF 1,3,1,0,0,0,0,0,<../../../at91lib/peripherals/dbgu/dbgu.c><dbgu.c> 
+OPTFFF 1,4,1,0,0,0,0,0,<../../../at91lib/peripherals/pio/pio.c><pio.c> 
+OPTFFF 1,5,1,0,0,0,0,0,<../../../at91lib/peripherals/pio/pio_it.c><pio_it.c> 
+OPTFFF 1,6,1,0,0,0,0,0,<../../../at91lib/peripherals/pit/pit.c><pit.c> 
+OPTFFF 1,7,1,0,0,0,0,0,<../../../at91lib/peripherals/pmc/pmc.c><pmc.c> 
+OPTFFF 1,8,1,0,0,0,0,0,<../../../at91lib/peripherals/tc/tc.c><tc.c> 
+OPTFFF 1,9,1,0,0,0,0,0,<../../../at91lib/utility/led.c><led.c> 
+OPTFFF 1,10,2,0,0,0,0,0,<../../../at91lib/peripherals/cp15/cp15_asm_keil.s><cp15_asm_keil.s> 
+OPTFFF 1,11,1,0,0,0,0,0,<../../../at91lib/boards/at91sam7x-ek/board_lowlevel.c><board_lowlevel.c> 
+OPTFFF 1,12,1,0,0,0,0,0,<../../../at91lib/boards/at91sam7x-ek/board_memories.c><board_memories.c> 
+OPTFFF 1,13,2,0,0,0,0,0,<../../../at91lib/boards/at91sam7x-ek/board_cstartup_keil.s><board_cstartup_keil.s> 
+OPTFFF 1,14,1,0,0,0,0,0,<../../../at91lib/utility/retarget.c><retarget.c> 
+OPTFFF 2,15,1,0,0,0,0,0,<../../getting-started-project/main.c><main.c> 
+
+
+TARGOPT 1, (flash-SAM-ICE)
+ ADSCLK=18432000
+  OPTTT 1,1,1,0
+  OPTHX 1,65535,0,0,0
+  OPTLX 79,66,8,<.\at91sam7x128-flash\>
+  OPTOX 16
+  OPTLT 1,1,1,0,1,1,0,1,0,0,0,0
+  OPTXL 1,1,1,1,1,1,1,0,0
+  OPTFL 0,0,0
+  OPTAX 0
+  OPTDL (SARM.DLL)(-cAT91SAM7X)(DARMATS.DLL)(-p91SAM7X128)(SARM.DLL)()(TARMATS.DLL)(-p91SAM7X128)
+  OPTDBG 48638,6,()()()()()()()()()() (Segger\JLTAgdi.dll)()()()
+  OPTKEY 0,(UL2ARM)()
+  OPTKEY 0,(DLGTARM)((117=-1,-1,-1,-1,0)(116=-1,-1,-1,-1,0)(119=-1,-1,-1,-1,0)(3015=-1,-1,-1,-1,0)(3016=-1,-1,-1,-1,0)(3018=-1,-1,-1,-1,0)(112=-1,-1,-1,-1,0)(110=-1,-1,-1,-1,0)(111=-1,-1,-1,-1,0)(100=-1,-1,-1,-1,0)(101=-1,-1,-1,-1,0)(102=-1,-1,-1,-1,0)(118=-1,-1,-1,-1,0)(130=-1,-1,-1,-1,0)(131=-1,-1,-1,-1,0)(191=-1,-1,-1,-1,0)(140=-1,-1,-1,-1,0)(3014=-1,-1,-1,-1,0)(114=-1,-1,-1,-1,0)(113=-1,-1,-1,-1,0)(115=-1,-1,-1,-1,0)(125=-1,-1,-1,-1,0)(3006=-1,-1,-1,-1,0)(135=-1,-1,-1,-1,0))
+  OPTKEY 0,(ARMDBGFLAGS)()
+  OPTKEY 0,(JLTAgdi)(-O1038 -J1 -Y1000 -Z8 -FO7 -FD200000 -FC800 -FN2  -FF0AT91SAM7_128 -FS0100000 -FL020000)
+  OPTKEY 0,(JLTDLG)()
+  OPTDF 0x80
+  OPTLE <>
+  OPTLC <>
+EndOpt
+
+TARGOPT 2, (sram-SAM-ICE)
+ ADSCLK=18432000
+  OPTTT 1,1,1,0
+  OPTHX 1,65535,0,0,0
+  OPTLX 79,66,8,<.\at91sam7x128-sram\>
+  OPTOX 16
+  OPTLT 1,1,1,0,1,1,0,1,0,0,0,0
+  OPTXL 1,1,1,1,1,1,1,0,0
+  OPTFL 0,0,0
+  OPTAX 0
+  OPTDL (SARM.DLL)(-cAT91SAM7X)(DARMATS.DLL)(-p91SAM7X128)(SARM.DLL)()(TARMATS.DLL)(-p91SAM7X128)
+  OPTDBG 48638,6,()()()()()()()()()(../../../resources/keil/at91sam7x-ek-sram.ini) (Segger\JLTAgdi.dll)()()()
+  OPTKEY 0,(UL2ARM)()
+  OPTKEY 0,(DLGTARM)((117=-1,-1,-1,-1,0)(116=-1,-1,-1,-1,0)(119=-1,-1,-1,-1,0)(3015=-1,-1,-1,-1,0)(3016=-1,-1,-1,-1,0)(3018=-1,-1,-1,-1,0)(112=-1,-1,-1,-1,0)(110=-1,-1,-1,-1,0)(111=-1,-1,-1,-1,0)(100=-1,-1,-1,-1,0)(101=-1,-1,-1,-1,0)(102=-1,-1,-1,-1,0)(118=-1,-1,-1,-1,0)(130=-1,-1,-1,-1,0)(131=-1,-1,-1,-1,0)(191=-1,-1,-1,-1,0)(140=-1,-1,-1,-1,0)(3014=-1,-1,-1,-1,0)(114=-1,-1,-1,-1,0)(113=-1,-1,-1,-1,0)(115=-1,-1,-1,-1,0)(125=-1,-1,-1,-1,0)(3006=-1,-1,-1,-1,0)(135=-1,-1,-1,-1,0))
+  OPTKEY 0,(ARMDBGFLAGS)()
+  OPTKEY 0,(JLTAgdi)(-O1038 -J1 -Y1000 -Z8 -FO7 -FD200000 -FC800 -FN0)
+  OPTKEY 0,(JLTDLG)()
+  OPTDF 0x80
+  OPTLE <>
+  OPTLC <>
+EndOpt
+
+TARGOPT 3, (flash-ULINK)
+ ADSCLK=18432000
+  OPTTT 1,1,1,0
+  OPTHX 1,65535,0,0,0
+  OPTLX 79,66,8,<.\at91sam7x128-flash\>
+  OPTOX 16
+  OPTLT 1,1,1,0,1,1,0,1,0,0,0,0
+  OPTXL 1,1,1,1,1,1,1,0,0
+  OPTFL 0,0,0
+  OPTAX 0
+  OPTDL (SARM.DLL)(-cAT91SAM7X)(DARMATS.DLL)(-p91SAM7X128)(SARM.DLL)()(TARMATS.DLL)(-p91SAM7X128)
+  OPTDBG 48638,6,()()()()()()()()()() (BIN\UL2ARM.dll)()()()
+  OPTKEY 0,(UL2ARM)(-U -O14 -S0 -C-1 -FO7 -FD200000 -FC800 -FN2  -FF0AT91SAM7_128 -FS0100000 -FL020000)
+  OPTKEY 0,(DLGTARM)((117=-1,-1,-1,-1,0)(116=-1,-1,-1,-1,0)(119=-1,-1,-1,-1,0)(3015=-1,-1,-1,-1,0)(3016=-1,-1,-1,-1,0)(3018=-1,-1,-1,-1,0)(112=-1,-1,-1,-1,0)(110=-1,-1,-1,-1,0)(111=-1,-1,-1,-1,0)(100=-1,-1,-1,-1,0)(101=-1,-1,-1,-1,0)(102=-1,-1,-1,-1,0)(118=-1,-1,-1,-1,0)(130=-1,-1,-1,-1,0)(131=-1,-1,-1,-1,0)(191=-1,-1,-1,-1,0)(140=-1,-1,-1,-1,0)(3014=-1,-1,-1,-1,0)(114=-1,-1,-1,-1,0)(113=-1,-1,-1,-1,0)(115=-1,-1,-1,-1,0)(125=-1,-1,-1,-1,0)(3006=-1,-1,-1,-1,0)(135=-1,-1,-1,-1,0))
+  OPTKEY 0,(ARMDBGFLAGS)()
+  OPTKEY 0,(JLTAgdi)()
+  OPTKEY 0,(JLTDLG)()
+  OPTDF 0x80
+  OPTLE <>
+  OPTLC <>
+EndOpt
+
+TARGOPT 4, (sram-ULINK)
+ ADSCLK=18432000
+  OPTTT 1,1,1,0
+  OPTHX 1,65535,0,0,0
+  OPTLX 79,66,8,<.\at91sam7x128-sram\>
+  OPTOX 16
+  OPTLT 1,1,1,0,1,1,0,1,0,0,0,0
+  OPTXL 1,1,1,1,1,1,1,0,0
+  OPTFL 0,0,0
+  OPTAX 0
+  OPTDL (SARM.DLL)(-cAT91SAM7X)(DARMATS.DLL)(-p91SAM7X128)(SARM.DLL)()(TARMATS.DLL)(-p91SAM7X128)
+  OPTDBG 48638,6,()()()()()()()()()(../../../resources/keil/at91sam7x-ek-sram.ini) (BIN\UL2ARM.dll)()()()
+  OPTKEY 0,(UL2ARM)(-UV0844MAE -O14 -S0 -C0 -N00("ARM7TDMI Core") -D00(3F0F0F0F) -L00(4) -FO7 -FD200000 -FC800 -FN0)
+  OPTKEY 0,(DLGTARM)((117=-1,-1,-1,-1,0)(116=-1,-1,-1,-1,0)(119=-1,-1,-1,-1,0)(3015=-1,-1,-1,-1,0)(3016=-1,-1,-1,-1,0)(3018=-1,-1,-1,-1,0)(112=-1,-1,-1,-1,0)(110=-1,-1,-1,-1,0)(111=-1,-1,-1,-1,0)(100=-1,-1,-1,-1,0)(101=-1,-1,-1,-1,0)(102=-1,-1,-1,-1,0)(118=-1,-1,-1,-1,0)(130=-1,-1,-1,-1,0)(131=-1,-1,-1,-1,0)(191=-1,-1,-1,-1,0)(140=-1,-1,-1,-1,0)(3014=-1,-1,-1,-1,0)(114=-1,-1,-1,-1,0)(113=-1,-1,-1,-1,0)(115=-1,-1,-1,-1,0)(125=-1,-1,-1,-1,0)(3006=-1,-1,-1,-1,0)(135=-1,-1,-1,-1,0))
+  OPTKEY 0,(ARMDBGFLAGS)()
+  OPTKEY 0,(JLTAgdi)()
+  OPTKEY 0,(JLTDLG)()
+  OPTDF 0x80
+  OPTLE <>
+  OPTLC <>
+EndOpt
+

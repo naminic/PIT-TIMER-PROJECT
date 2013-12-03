@@ -26,127 +26,137 @@
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  * ----------------------------------------------------------------------------
  */
-//*****************************************************//
-//                 WWW.NAMINIC.COM
-//*****************************************************//
 
 //------------------------------------------------------------------------------
 //         Headers
 //------------------------------------------------------------------------------
 
+#include "led.h"
 #include <board.h>
 #include <pio/pio.h>
-#include <pit/pit.h>
-#include <aic/aic.h>
-
 
 //------------------------------------------------------------------------------
-//         Local definitions
-//------------------------------------------------------------------------------
-const Pin pinLED[]={PINS_LEDS};
-
-/// PIT period value in µseconds.
-#define PIT_PERIOD          1000
-
-//------------------------------------------------------------------------------
-//         Local variables
+//         Local Variables
 //------------------------------------------------------------------------------
 
-/// Global timestamp in milliseconds since start of application.
-volatile unsigned int timestamp = 0;
-
-
+#ifdef PINS_LEDS
+static const Pin pinsLeds[] = {PINS_LEDS};
+static const unsigned int numLeds = PIO_LISTSIZE(pinsLeds);
+#endif
 
 //------------------------------------------------------------------------------
-//         Local functions
+//         Global Functions
 //------------------------------------------------------------------------------
 
 //------------------------------------------------------------------------------
-/// Handler for PIT interrupt. Increments the timestamp counter.
+/// Configures the pin associated with the given LED number. If the LED does
+/// not exist on the board, the function does nothing.
+/// \param led  Number of the LED to configure.
+/// \return 1 if the LED exists and has been configured; otherwise 0.
 //------------------------------------------------------------------------------
-void ISR_Pit(void)
+unsigned char LED_Configure(unsigned int led)
 {
-    unsigned int status;
+#ifdef PINS_LEDS
+    // Check that LED exists
+    if (led >= numLeds) {
 
-    // Read the PIT status register
-    status = PIT_GetStatus() & AT91C_PITC_PITS;
-    if (status != 0) {
-
-        // Read the PIVR to acknowledge interrupt and get number of ticks
-        timestamp += (PIT_GetPIVR() >> 20);
+        return 0;
     }
-}
-//------------------------------------------------------------------------------
-/// Configure the periodic interval timer to generate an interrupt every
-/// millisecond.
-//------------------------------------------------------------------------------
-void ConfigurePit(void)
-{
-    // Initialize the PIT to the desired frequency
-    PIT_Init(PIT_PERIOD, BOARD_MCK / 1000000);
 
-    // Configure interrupt on PIT
-    AIC_DisableIT(AT91C_ID_SYS);
-    AIC_ConfigureIT(AT91C_ID_SYS, AT91C_AIC_PRIOR_LOWEST, ISR_Pit);
-    AIC_EnableIT(AT91C_ID_SYS);
-    PIT_EnableIT();
-
-    // Enable the pit
-    PIT_Enable();
-}
-
-
-//------------------------------------------------------------------------------
-/// Waits for the given number of milliseconds (using the timestamp generated
-/// by the PIT).
-/// \param delay  Delay to wait for, in milliseconds.
-//------------------------------------------------------------------------------
-void Wait(unsigned long delay)
-{
-    volatile unsigned int start = timestamp;
-    unsigned int elapsed;
-    do {
-        elapsed = timestamp;
-        elapsed -= start;
-    }
-    while (elapsed < delay);
+    // Configure LED
+    return (PIO_Configure(&pinsLeds[led], 1));
+#else
+    return 0;
+#endif
 }
 
 //------------------------------------------------------------------------------
-//         Exported functions
+/// Turns the given LED on if it exists; otherwise does nothing.
+/// \param led  Number of the LED to turn on.
+/// \return 1 if the LED has been turned on; 0 otherwise.
 //------------------------------------------------------------------------------
+unsigned char LED_Set(unsigned int led)
+{
+#ifdef PINS_LEDS
+    // Check if LED exists
+    if (led >= numLeds) {
+
+        return 0;
+    }
+
+    // Turn LED on
+    if (pinsLeds[led].type == PIO_OUTPUT_0) {
+
+        PIO_Set(&pinsLeds[led]);
+    }
+    else {
+
+        PIO_Clear(&pinsLeds[led]);
+    }
+
+    return 1;
+#else
+    return 0;
+#endif
+}
 
 //------------------------------------------------------------------------------
-/// Application entry point. Configures the DBGU, PIT, TC0, LEDs and buttons
-/// and makes LED\#1 blink in its infinite loop, using the Wait function.
-/// \return Unused (ANSI-C compatibility).
+/// Turns a LED off.
+/// \param led  Number of the LED to turn off.
+/// \param 1 if the LED has been turned off; 0 otherwise.
 //------------------------------------------------------------------------------
-int main(void)
+unsigned char LED_Clear(unsigned int led)
 {
-         
-    // Configuration
-	 PIO_Configure(&pinLED,2);
-   ConfigurePit();
-	 
-    
-    // Main loop
-    while (1) {
-			//Set Led 0
-			PIO_Set(&pinLED[0]);
-      // Wait for 200ms
-      Wait(200);
-			//Set Led 1
-			PIO_Set(&pinLED[1]);
-			// Wait for 200ms
-			Wait(200);
-			//Clear Led 1
-			PIO_Clear(&pinLED[1]);
-			// Wait for 200ms
-			Wait(200);
-			//Clear Led 0
-			PIO_Clear(&pinLED[0]);
-			// Wait for 200ms
-			Wait(200);  
+#ifdef PINS_LEDS
+    // Check if LED exists
+    if (led >= numLeds) {
+
+        return 0;
     }
+
+    // Turn LED off
+    if (pinsLeds[led].type == PIO_OUTPUT_0) {
+
+        PIO_Clear(&pinsLeds[led]);
+    }
+    else {
+
+        PIO_Set(&pinsLeds[led]);
+    }
+
+    return 1;
+#else
+    return 0;
+#endif
+}
+
+//------------------------------------------------------------------------------
+/// Toggles the current state of a LED.
+/// \param led  Number of the LED to toggle.
+/// \return 1 if the LED has been toggled; otherwise 0.
+//------------------------------------------------------------------------------
+unsigned char LED_Toggle(unsigned int led)
+{
+#ifdef PINS_LEDS
+    // Check if LED exists
+    if (led >= numLeds) {
+
+        return 0;
+    }
+
+    // Toggle LED
+    if (PIO_GetOutputDataStatus(&pinsLeds[led])) {
+
+        PIO_Clear(&pinsLeds[led]);
+    }
+    else {
+
+        PIO_Set(&pinsLeds[led]);
+    }
+
+    return 1;
+#else
+    return 0;
+#endif
 }
 

@@ -47,7 +47,7 @@
           <OutputName>at91sam7x256-flash</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
-          <CreateHexFile>1</CreateHexFile>
+          <CreateHexFile>0</CreateHexFile>
           <DebugInformation>1</DebugInformation>
           <BrowseInformation>1</BrowseInformation>
           <ListingPath>.\at91sam7x256-flash\</ListingPath>
@@ -129,14 +129,13 @@
           </Simulator>
           <Target>
             <UseTarget>1</UseTarget>
-            <LoadApplicationAtStartup>1</LoadApplicationAtStartup>
+            <LoadApplicationAtStartup>0</LoadApplicationAtStartup>
             <RunToMain>1</RunToMain>
             <RestoreBreakpoints>1</RestoreBreakpoints>
             <RestoreWatchpoints>1</RestoreWatchpoints>
             <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
             <RestoreFunctions>0</RestoreFunctions>
             <RestoreToolbox>1</RestoreToolbox>
-            <RestoreTracepoints>0</RestoreTracepoints>
           </Target>
           <RunDebugAfterBuild>0</RunDebugAfterBuild>
           <TargetSelection>6</TargetSelection>
@@ -163,10 +162,10 @@
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>0</UpdateFlashBeforeDebugging>
             <Capability>1</Capability>
-            <DriverSelection>0</DriverSelection>
+            <DriverSelection>4098</DriverSelection>
           </Flash1>
           <Flash2>Segger\JLTAgdi.dll</Flash2>
-          <Flash3></Flash3>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
         </Utilities>
         <TargetArmAds>
@@ -345,7 +344,6 @@
             <Rwpi>0</Rwpi>
             <wLevel>0</wLevel>
             <uThumb>1</uThumb>
-            <uSurpInc>0</uSurpInc>
             <VariousControls>
               <MiscControls>--gnu</MiscControls>
               <Define>at91sam7x256 flash NOFPUT </Define>
@@ -361,7 +359,6 @@
             <SplitLS>0</SplitLS>
             <SwStkChk>0</SwStkChk>
             <NoWarn>0</NoWarn>
-            <uSurpInc>0</uSurpInc>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -402,14 +399,39 @@
               <FilePath>../../../at91lib/peripherals/cp15/cp15.c</FilePath>
             </File>
             <File>
+              <FileName>dbgu.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../../../at91lib/peripherals/dbgu/dbgu.c</FilePath>
+            </File>
+            <File>
               <FileName>pio.c</FileName>
               <FileType>1</FileType>
               <FilePath>../../../at91lib/peripherals/pio/pio.c</FilePath>
             </File>
             <File>
+              <FileName>pio_it.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../../../at91lib/peripherals/pio/pio_it.c</FilePath>
+            </File>
+            <File>
               <FileName>pit.c</FileName>
               <FileType>1</FileType>
               <FilePath>../../../at91lib/peripherals/pit/pit.c</FilePath>
+            </File>
+            <File>
+              <FileName>pmc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../../../at91lib/peripherals/pmc/pmc.c</FilePath>
+            </File>
+            <File>
+              <FileName>tc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../../../at91lib/peripherals/tc/tc.c</FilePath>
+            </File>
+            <File>
+              <FileName>led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../../../at91lib/utility/led.c</FilePath>
             </File>
             <File>
               <FileName>cp15_asm_keil.s</FileName>
@@ -431,15 +453,20 @@
               <FileType>2</FileType>
               <FilePath>../../../at91lib/boards/at91sam7x-ek/board_cstartup_keil.s</FilePath>
             </File>
+            <File>
+              <FileName>retarget.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../../../at91lib/utility/retarget.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>pit-project</GroupName>
+          <GroupName>getting-started-project</GroupName>
           <Files>
             <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\main.c</FilePath>
+              <FilePath>../../getting-started-project/main.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -575,7 +602,6 @@
             <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
             <RestoreFunctions>0</RestoreFunctions>
             <RestoreToolbox>1</RestoreToolbox>
-            <RestoreTracepoints>0</RestoreTracepoints>
           </Target>
           <RunDebugAfterBuild>0</RunDebugAfterBuild>
           <TargetSelection>6</TargetSelection>
@@ -784,7 +810,6 @@
             <Rwpi>0</Rwpi>
             <wLevel>0</wLevel>
             <uThumb>1</uThumb>
-            <uSurpInc>0</uSurpInc>
             <VariousControls>
               <MiscControls>--gnu</MiscControls>
               <Define>at91sam7x256 sram NOFPUT </Define>
@@ -800,7 +825,6 @@
             <SplitLS>0</SplitLS>
             <SwStkChk>0</SwStkChk>
             <NoWarn>0</NoWarn>
-            <uSurpInc>0</uSurpInc>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -841,14 +865,39 @@
               <FilePath>../../../at91lib/peripherals/cp15/cp15.c</FilePath>
             </File>
             <File>
+              <FileName>dbgu.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../../../at91lib/peripherals/dbgu/dbgu.c</FilePath>
+            </File>
+            <File>
               <FileName>pio.c</FileName>
               <FileType>1</FileType>
               <FilePath>../../../at91lib/peripherals/pio/pio.c</FilePath>
             </File>
             <File>
+              <FileName>pio_it.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../../../at91lib/peripherals/pio/pio_it.c</FilePath>
+            </File>
+            <File>
               <FileName>pit.c</FileName>
               <FileType>1</FileType>
               <FilePath>../../../at91lib/peripherals/pit/pit.c</FilePath>
+            </File>
+            <File>
+              <FileName>pmc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../../../at91lib/peripherals/pmc/pmc.c</FilePath>
+            </File>
+            <File>
+              <FileName>tc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../../../at91lib/peripherals/tc/tc.c</FilePath>
+            </File>
+            <File>
+              <FileName>led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../../../at91lib/utility/led.c</FilePath>
             </File>
             <File>
               <FileName>cp15_asm_keil.s</FileName>
@@ -870,15 +919,20 @@
               <FileType>2</FileType>
               <FilePath>../../../at91lib/boards/at91sam7x-ek/board_cstartup_keil.s</FilePath>
             </File>
+            <File>
+              <FileName>retarget.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../../../at91lib/utility/retarget.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>pit-project</GroupName>
+          <GroupName>getting-started-project</GroupName>
           <Files>
             <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\main.c</FilePath>
+              <FilePath>../../getting-started-project/main.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1014,7 +1068,6 @@
             <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
             <RestoreFunctions>0</RestoreFunctions>
             <RestoreToolbox>1</RestoreToolbox>
-            <RestoreTracepoints>0</RestoreTracepoints>
           </Target>
           <RunDebugAfterBuild>0</RunDebugAfterBuild>
           <TargetSelection>6</TargetSelection>
@@ -1223,7 +1276,6 @@
             <Rwpi>0</Rwpi>
             <wLevel>0</wLevel>
             <uThumb>1</uThumb>
-            <uSurpInc>0</uSurpInc>
             <VariousControls>
               <MiscControls>--gnu</MiscControls>
               <Define>at91sam7x256 flash NOFPUT </Define>
@@ -1239,7 +1291,6 @@
             <SplitLS>0</SplitLS>
             <SwStkChk>0</SwStkChk>
             <NoWarn>0</NoWarn>
-            <uSurpInc>0</uSurpInc>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -1280,14 +1331,39 @@
               <FilePath>../../../at91lib/peripherals/cp15/cp15.c</FilePath>
             </File>
             <File>
+              <FileName>dbgu.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../../../at91lib/peripherals/dbgu/dbgu.c</FilePath>
+            </File>
+            <File>
               <FileName>pio.c</FileName>
               <FileType>1</FileType>
               <FilePath>../../../at91lib/peripherals/pio/pio.c</FilePath>
             </File>
             <File>
+              <FileName>pio_it.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../../../at91lib/peripherals/pio/pio_it.c</FilePath>
+            </File>
+            <File>
               <FileName>pit.c</FileName>
               <FileType>1</FileType>
               <FilePath>../../../at91lib/peripherals/pit/pit.c</FilePath>
+            </File>
+            <File>
+              <FileName>pmc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../../../at91lib/peripherals/pmc/pmc.c</FilePath>
+            </File>
+            <File>
+              <FileName>tc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../../../at91lib/peripherals/tc/tc.c</FilePath>
+            </File>
+            <File>
+              <FileName>led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../../../at91lib/utility/led.c</FilePath>
             </File>
             <File>
               <FileName>cp15_asm_keil.s</FileName>
@@ -1309,15 +1385,20 @@
               <FileType>2</FileType>
               <FilePath>../../../at91lib/boards/at91sam7x-ek/board_cstartup_keil.s</FilePath>
             </File>
+            <File>
+              <FileName>retarget.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../../../at91lib/utility/retarget.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>pit-project</GroupName>
+          <GroupName>getting-started-project</GroupName>
           <Files>
             <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\main.c</FilePath>
+              <FilePath>../../getting-started-project/main.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1453,7 +1534,6 @@
             <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
             <RestoreFunctions>0</RestoreFunctions>
             <RestoreToolbox>1</RestoreToolbox>
-            <RestoreTracepoints>0</RestoreTracepoints>
           </Target>
           <RunDebugAfterBuild>0</RunDebugAfterBuild>
           <TargetSelection>6</TargetSelection>
@@ -1662,7 +1742,6 @@
             <Rwpi>0</Rwpi>
             <wLevel>0</wLevel>
             <uThumb>1</uThumb>
-            <uSurpInc>0</uSurpInc>
             <VariousControls>
               <MiscControls>--gnu</MiscControls>
               <Define>at91sam7x256 sram NOFPUT </Define>
@@ -1678,7 +1757,6 @@
             <SplitLS>0</SplitLS>
             <SwStkChk>0</SwStkChk>
             <NoWarn>0</NoWarn>
-            <uSurpInc>0</uSurpInc>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -1719,14 +1797,39 @@
               <FilePath>../../../at91lib/peripherals/cp15/cp15.c</FilePath>
             </File>
             <File>
+              <FileName>dbgu.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../../../at91lib/peripherals/dbgu/dbgu.c</FilePath>
+            </File>
+            <File>
               <FileName>pio.c</FileName>
               <FileType>1</FileType>
               <FilePath>../../../at91lib/peripherals/pio/pio.c</FilePath>
             </File>
             <File>
+              <FileName>pio_it.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../../../at91lib/peripherals/pio/pio_it.c</FilePath>
+            </File>
+            <File>
               <FileName>pit.c</FileName>
               <FileType>1</FileType>
               <FilePath>../../../at91lib/peripherals/pit/pit.c</FilePath>
+            </File>
+            <File>
+              <FileName>pmc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../../../at91lib/peripherals/pmc/pmc.c</FilePath>
+            </File>
+            <File>
+              <FileName>tc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../../../at91lib/peripherals/tc/tc.c</FilePath>
+            </File>
+            <File>
+              <FileName>led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../../../at91lib/utility/led.c</FilePath>
             </File>
             <File>
               <FileName>cp15_asm_keil.s</FileName>
@@ -1748,15 +1851,20 @@
               <FileType>2</FileType>
               <FilePath>../../../at91lib/boards/at91sam7x-ek/board_cstartup_keil.s</FilePath>
             </File>
+            <File>
+              <FileName>retarget.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../../../at91lib/utility/retarget.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>pit-project</GroupName>
+          <GroupName>getting-started-project</GroupName>
           <Files>
             <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\main.c</FilePath>
+              <FilePath>../../getting-started-project/main.c</FilePath>
             </File>
           </Files>
         </Group>

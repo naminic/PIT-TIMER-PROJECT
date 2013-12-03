@@ -75,7 +75,7 @@
         <tvExpOptDlg>0</tvExpOptDlg>
         <IsCurrentTarget>1</IsCurrentTarget>
       </OPTFL>
-      <CpuCode>16</CpuCode>
+      <CpuCode>0</CpuCode>
       <DllOpt>
         <SimDllName>SARM.DLL</SimDllName>
         <SimDllArguments>-cAT91SAM7X</SimDllArguments>
@@ -96,14 +96,13 @@
         <sRmem>1</sRmem>
         <sRfunc>1</sRfunc>
         <sRbox>1</sRbox>
-        <tLdApp>1</tLdApp>
+        <tLdApp>0</tLdApp>
         <tGomain>1</tGomain>
         <tRbreak>1</tRbreak>
         <tRwatch>1</tRwatch>
         <tRmem>1</tRmem>
         <tRfunc>0</tRfunc>
         <tRbox>1</tRbox>
-        <tRtrace>0</tRtrace>
         <sRunDeb>0</sRunDeb>
         <sLrtime>0</sLrtime>
         <nTsel>6</nTsel>
@@ -128,7 +127,7 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>DLGTARM</Key>
-          <Name>(117=-1,-1,-1,-1,0)(116=-1,-1,-1,-1,0)(119=-1,-1,-1,-1,0)(3015=-1,-1,-1,-1,0)(3016=-1,-1,-1,-1,0)(3018=-1,-1,-1,-1,0)(112=-1,-1,-1,-1,0)(110=-1,-1,-1,-1,0)(111=-1,-1,-1,-1,0)(100=-1,-1,-1,-1,0)(101=-1,-1,-1,-1,0)(102=-1,-1,-1,-1,0)(118=-1,-1,-1,-1,0)(130=-1,-1,-1,-1,0)(131=-1,-1,-1,-1,0)(191=-1,-1,-1,-1,0)(140=-1,-1,-1,-1,0)(3014=-1,-1,-1,-1,0)(114=-1,-1,-1,-1,0)(113=-1,-1,-1,-1,0)(115=-1,-1,-1,-1,0)(125=-1,-1,-1,-1,0)(3006=-1,-1,-1,-1,0)(135=-1,-1,-1,-1,0)</Name>
+          <Name>(117=-1,-1,-1,-1,0)(116=-1,-1,-1,-1,0)(119=-1,-1,-1,-1,0)(112=-1,-1,-1,-1,0)(110=-1,-1,-1,-1,0)(111=-1,-1,-1,-1,0)(100=-1,-1,-1,-1,0)(101=-1,-1,-1,-1,0)(118=-1,-1,-1,-1,0)(130=-1,-1,-1,-1,0)(131=-1,-1,-1,-1,0)(191=-1,-1,-1,-1,0)(192=-1,-1,-1,-1,0)(140=-1,-1,-1,-1,0)(3010=-1,-1,-1,-1,0)(114=-1,-1,-1,-1,0)(113=-1,-1,-1,-1,0)(115=-1,-1,-1,-1,0)(125=-1,-1,-1,-1,0)(3006=-1,-1,-1,-1,0)(135=-1,-1,-1,-1,0)(190=-1,-1,-1,-1,0)(120=-1,-1,-1,-1,0)</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
@@ -138,7 +137,7 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>JLTAgdi</Key>
-          <Name>-O1038 -J1 -Y1000 -Z8 -FO7 -FD200000 -FC800 -FN2  -FF0AT91SAM7_256 -FS0100000 -FL040000</Name>
+          <Name>-O1070 -J1 -Y1000 -Z8 -FO15 -FD200000 -FC800 -FN1 -FF0AT91SAM7_256 -FS0100000 -FL040000</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
@@ -150,7 +149,7 @@
       <DebugFlag>
         <trace>0</trace>
         <periodic>0</periodic>
-        <aLwin>0</aLwin>
+        <aLwin>1</aLwin>
         <aCover>0</aCover>
         <aSer1>0</aSer1>
         <aSer2>0</aSer2>
@@ -173,9 +172,6 @@
         <newCpu>0</newCpu>
         <uProt>0</uProt>
       </DebugFlag>
-      <Tracepoint>
-        <THDelay>0</THDelay>
-      </Tracepoint>
       <LintExecutable></LintExecutable>
       <LintConfigFile></LintConfigFile>
     </TargetOption>
@@ -236,7 +232,7 @@
         <tvExpOptDlg>0</tvExpOptDlg>
         <IsCurrentTarget>0</IsCurrentTarget>
       </OPTFL>
-      <CpuCode>16</CpuCode>
+      <CpuCode>0</CpuCode>
       <DllOpt>
         <SimDllName>SARM.DLL</SimDllName>
         <SimDllArguments>-cAT91SAM7X</SimDllArguments>
@@ -264,7 +260,6 @@
         <tRmem>1</tRmem>
         <tRfunc>0</tRfunc>
         <tRbox>1</tRbox>
-        <tRtrace>0</tRtrace>
         <sRunDeb>0</sRunDeb>
         <sLrtime>0</sLrtime>
         <nTsel>6</nTsel>
@@ -334,9 +329,6 @@
         <newCpu>0</newCpu>
         <uProt>0</uProt>
       </DebugFlag>
-      <Tracepoint>
-        <THDelay>0</THDelay>
-      </Tracepoint>
       <LintExecutable></LintExecutable>
       <LintConfigFile></LintConfigFile>
     </TargetOption>
@@ -397,7 +389,7 @@
         <tvExpOptDlg>0</tvExpOptDlg>
         <IsCurrentTarget>0</IsCurrentTarget>
       </OPTFL>
-      <CpuCode>16</CpuCode>
+      <CpuCode>0</CpuCode>
       <DllOpt>
         <SimDllName>SARM.DLL</SimDllName>
         <SimDllArguments>-cAT91SAM7X</SimDllArguments>
@@ -425,7 +417,6 @@
         <tRmem>1</tRmem>
         <tRfunc>0</tRfunc>
         <tRbox>1</tRbox>
-        <tRtrace>0</tRtrace>
         <sRunDeb>0</sRunDeb>
         <sLrtime>0</sLrtime>
         <nTsel>6</nTsel>
@@ -495,9 +486,6 @@
         <newCpu>0</newCpu>
         <uProt>0</uProt>
       </DebugFlag>
-      <Tracepoint>
-        <THDelay>0</THDelay>
-      </Tracepoint>
       <LintExecutable></LintExecutable>
       <LintConfigFile></LintConfigFile>
     </TargetOption>
@@ -558,7 +546,7 @@
         <tvExpOptDlg>0</tvExpOptDlg>
         <IsCurrentTarget>0</IsCurrentTarget>
       </OPTFL>
-      <CpuCode>16</CpuCode>
+      <CpuCode>0</CpuCode>
       <DllOpt>
         <SimDllName>SARM.DLL</SimDllName>
         <SimDllArguments>-cAT91SAM7X</SimDllArguments>
@@ -586,7 +574,6 @@
         <tRmem>1</tRmem>
         <tRfunc>0</tRfunc>
         <tRbox>1</tRbox>
-        <tRtrace>0</tRtrace>
         <sRunDeb>0</sRunDeb>
         <sLrtime>0</sLrtime>
         <nTsel>6</nTsel>
@@ -656,9 +643,6 @@
         <newCpu>0</newCpu>
         <uProt>0</uProt>
       </DebugFlag>
-      <Tracepoint>
-        <THDelay>0</THDelay>
-      </Tracepoint>
       <LintExecutable></LintExecutable>
       <LintConfigFile></LintConfigFile>
     </TargetOption>
@@ -669,7 +653,6 @@
     <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
-    <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>1</GroupNumber>
       <FileNumber>1</FileNumber>
@@ -678,13 +661,11 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>48</TopLine>
-      <CurrentLine>54</CurrentLine>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>../../../at91lib/peripherals/aic/aic.c</PathWithFileName>
       <FilenameWithoutPath>aic.c</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
@@ -699,8 +680,6 @@
       <bDave2>0</bDave2>
       <PathWithFileName>../../../at91lib/peripherals/cp15/cp15.c</PathWithFileName>
       <FilenameWithoutPath>cp15.c</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
@@ -708,15 +687,13 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>17</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>172</TopLine>
-      <CurrentLine>9</CurrentLine>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
-      <PathWithFileName>../../../at91lib/peripherals/pio/pio.c</PathWithFileName>
-      <FilenameWithoutPath>pio.c</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
+      <PathWithFileName>../../../at91lib/peripherals/dbgu/dbgu.c</PathWithFileName>
+      <FilenameWithoutPath>dbgu.c</FilenameWithoutPath>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
@@ -724,20 +701,18 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>16</ColumnNumber>
+      <ColumnNumber>21</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>15</TopLine>
-      <CurrentLine>57</CurrentLine>
+      <TopLine>289</TopLine>
+      <CurrentLine>294</CurrentLine>
       <bDave2>0</bDave2>
-      <PathWithFileName>../../../at91lib/peripherals/pit/pit.c</PathWithFileName>
-      <FilenameWithoutPath>pit.c</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
+      <PathWithFileName>../../../at91lib/peripherals/pio/pio.c</PathWithFileName>
+      <FilenameWithoutPath>pio.c</FilenameWithoutPath>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
       <FileNumber>5</FileNumber>
-      <FileType>2</FileType>
+      <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
@@ -745,10 +720,8 @@
       <TopLine>0</TopLine>
       <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
-      <PathWithFileName>../../../at91lib/peripherals/cp15/cp15_asm_keil.s</PathWithFileName>
-      <FilenameWithoutPath>cp15_asm_keil.s</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
+      <PathWithFileName>../../../at91lib/peripherals/pio/pio_it.c</PathWithFileName>
+      <FilenameWithoutPath>pio_it.c</FilenameWithoutPath>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
@@ -761,10 +734,8 @@
       <TopLine>0</TopLine>
       <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
-      <PathWithFileName>../../../at91lib/boards/at91sam7x-ek/board_lowlevel.c</PathWithFileName>
-      <FilenameWithoutPath>board_lowlevel.c</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
+      <PathWithFileName>../../../at91lib/peripherals/pit/pit.c</PathWithFileName>
+      <FilenameWithoutPath>pit.c</FilenameWithoutPath>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
@@ -777,14 +748,82 @@
       <TopLine>0</TopLine>
       <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
-      <PathWithFileName>../../../at91lib/boards/at91sam7x-ek/board_memories.c</PathWithFileName>
-      <FilenameWithoutPath>board_memories.c</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
+      <PathWithFileName>../../../at91lib/peripherals/pmc/pmc.c</PathWithFileName>
+      <FilenameWithoutPath>pmc.c</FilenameWithoutPath>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
       <FileNumber>8</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>0</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>../../../at91lib/peripherals/tc/tc.c</PathWithFileName>
+      <FilenameWithoutPath>tc.c</FilenameWithoutPath>
+    </File>
+    <File>
+      <GroupNumber>1</GroupNumber>
+      <FileNumber>9</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>44</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>55</TopLine>
+      <CurrentLine>67</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>../../../at91lib/utility/led.c</PathWithFileName>
+      <FilenameWithoutPath>led.c</FilenameWithoutPath>
+    </File>
+    <File>
+      <GroupNumber>1</GroupNumber>
+      <FileNumber>10</FileNumber>
+      <FileType>2</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>0</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>../../../at91lib/peripherals/cp15/cp15_asm_keil.s</PathWithFileName>
+      <FilenameWithoutPath>cp15_asm_keil.s</FilenameWithoutPath>
+    </File>
+    <File>
+      <GroupNumber>1</GroupNumber>
+      <FileNumber>11</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>0</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>../../../at91lib/boards/at91sam7x-ek/board_lowlevel.c</PathWithFileName>
+      <FilenameWithoutPath>board_lowlevel.c</FilenameWithoutPath>
+    </File>
+    <File>
+      <GroupNumber>1</GroupNumber>
+      <FileNumber>12</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>0</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>../../../at91lib/boards/at91sam7x-ek/board_memories.c</PathWithFileName>
+      <FilenameWithoutPath>board_memories.c</FilenameWithoutPath>
+    </File>
+    <File>
+      <GroupNumber>1</GroupNumber>
+      <FileNumber>13</FileNumber>
       <FileType>2</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -795,32 +834,41 @@
       <bDave2>0</bDave2>
       <PathWithFileName>../../../at91lib/boards/at91sam7x-ek/board_cstartup_keil.s</PathWithFileName>
       <FilenameWithoutPath>board_cstartup_keil.s</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>1</GroupNumber>
+      <FileNumber>14</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>30</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>46</TopLine>
+      <CurrentLine>56</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>../../../at91lib/utility/retarget.c</PathWithFileName>
+      <FilenameWithoutPath>retarget.c</FilenameWithoutPath>
     </File>
   </Group>
 
   <Group>
-    <GroupName>pit-project</GroupName>
+    <GroupName>getting-started-project</GroupName>
     <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
-    <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>2</GroupNumber>
-      <FileNumber>9</FileNumber>
+      <FileNumber>15</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>27</ColumnNumber>
+      <ColumnNumber>29</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>28</TopLine>
-      <CurrentLine>12</CurrentLine>
+      <TopLine>336</TopLine>
+      <CurrentLine>350</CurrentLine>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\main.c</PathWithFileName>
+      <PathWithFileName>../../getting-started-project/main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
     </File>
   </Group>
 
